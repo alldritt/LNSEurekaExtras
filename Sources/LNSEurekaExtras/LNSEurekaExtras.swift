@@ -7,6 +7,7 @@
 //  Additions to the Eureka Form object
 //
 
+import UIKit
 import Eureka
 
 
