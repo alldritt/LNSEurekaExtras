@@ -44,11 +44,11 @@ extension Form {
 //  This version of FormViewController also provides a Copy menu for LabelRows to copy the row's value
 //  to the clipboard.
 
-class EurekaFormViewController: FormViewController, RowControllerType {
+open class EurekaFormViewController: FormViewController, RowControllerType {
     
-    var onDismissCallback: ((UIViewController) -> Void)?
+    public var onDismissCallback: ((UIViewController) -> Void)?
     
-    override func viewDidDisappear(_ animated: Bool) {
+    override public func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         
         if !isMovingToParent {
@@ -84,11 +84,11 @@ class EurekaFormViewController: FormViewController, RowControllerType {
 //  A version of UIViewController conforming to Eureka's RowControllerType protocol so that Eureka's
 //  dismissed callback operates correctly.
 
-class EurekaViewController: UIViewController, RowControllerType {
+open class EurekaViewController: UIViewController, RowControllerType {
     
-    var onDismissCallback: ((UIViewController) -> Void)?
+    public var onDismissCallback: ((UIViewController) -> Void)?
     
-    override func viewDidDisappear(_ animated: Bool) {
+    override public func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         
         if !isMovingToParent {
@@ -111,11 +111,11 @@ class EurekaViewController: UIViewController, RowControllerType {
 //  A version of UINavigationController conforming to Eureka's RowControllerType protocol so that
 //  Eureka's dismissed callback operates correctly.
 
-class EurekaNavigationController: UINavigationController, RowControllerType {
+open class EurekaNavigationController: UINavigationController, RowControllerType {
     
-    var onDismissCallback: ((UIViewController) -> Void)?
+    public var onDismissCallback: ((UIViewController) -> Void)?
     
-    override func viewDidDisappear(_ animated: Bool) {
+    override public func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         
         if !isMovingToParent {
