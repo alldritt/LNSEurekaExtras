@@ -8,7 +8,6 @@ After you set up your Package.swift manifest file, you can add Eureka as a depen
 
 ```
 dependencies: [ 
-    .package(url: "https://github.com/xmartlabs/Eureka.git", from: "5.3.2"),
     .package(url: "https://github.com/alldritt/LNSEurekaExtras.git", branch: "main")
 ]
 ```
