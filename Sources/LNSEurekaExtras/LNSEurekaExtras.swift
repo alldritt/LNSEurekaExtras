@@ -36,6 +36,25 @@ extension Form {
 }
 
 
+extension FormViewController {
+    public func replaceTableView(_ newStyle: UITableView.Style) {
+        replaceTableView(UITableView(frame: view.bounds, style: newStyle))
+    }
+    
+    public func replaceTableView(_ newTableView: UITableView) {
+        newTableView.frame = view.bounds
+        newTableView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        newTableView.delegate = tableView.delegate
+        newTableView.dataSource = tableView.dataSource
+        newTableView.rowHeight = UITableView.automaticDimension
+        newTableView.estimatedRowHeight = BaseRow.estimatedRowHeight
+        newTableView.allowsSelectionDuringEditing = true
+
+        view.addSubview(newTableView)
+        tableView.removeFromSuperview()
+        tableView = newTableView
+    }
+}
 
 //  A version of FormViewController conforming to Eureka's RowControllerType protocol so that Eureka's
 //  dismissed callback operates correctly.  Why Eureka's FormViewController does not provide this is a
