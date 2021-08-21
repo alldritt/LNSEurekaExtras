@@ -12,7 +12,7 @@ import SwiftUI
 import Eureka
 
 
-extension Form {
+extension Eureka.Form {
     public func evaluateDisabled() {
         allRows.forEach { (row) in
             row.evaluateDisabled()
@@ -128,7 +128,6 @@ open class EurekaViewController: UIViewController, RowControllerType {
 }
 
 
-/*
 @available(iOS 13.0, *)
 open class EurekaHostingController<Content>: UIHostingController<Content>, RowControllerType where Content : View {
     
@@ -142,7 +141,6 @@ open class EurekaHostingController<Content>: UIHostingController<Content>, RowCo
         }
     }
 }
-*/
 
 
 //  A version of UINavigationController conforming to Eureka's RowControllerType protocol so that
