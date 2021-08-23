@@ -128,7 +128,7 @@ open class EurekaViewController: UIViewController, RowControllerType {
 }
 
 
-@available(iOS 13.0, *)
+@available(iOS 14.0, *)
 open class EurekaHostingController<Content>: UIHostingController<Content>, RowControllerType where Content : View {
     
     public var onDismissCallback: ((UIViewController) -> Void)?
