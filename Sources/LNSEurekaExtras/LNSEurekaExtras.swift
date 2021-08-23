@@ -8,7 +8,6 @@
 //
 
 import UIKit
-import SwiftUI
 import Eureka
 
 
@@ -125,21 +124,6 @@ open class EurekaViewController: UIViewController, RowControllerType {
     }
     */
     
-}
-
-
-@available(iOS 14.0, *)
-open class EurekaHostingController<Content>: UIHostingController<Content>, RowControllerType where Content : View {
-    
-    public var onDismissCallback: ((UIViewController) -> Void)?
-    
-    override public func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        
-        if !isMovingToParent {
-            onDismissCallback?(self)
-        }
-    }
 }
 
 
